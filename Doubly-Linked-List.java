@@ -51,19 +51,6 @@ class DoublyLinkedList<T> {
   public void addFirst(T x) {addAtIndex(x, 0);}
   public void addLast(T x) {addAtIndex(x, sz);}
 
-  /*public void deleteAtIndex(int idx){
-    if (idx >= sz) throw new InputMismatchException("Invalid Index!");
-    if (sz == 1) head = tail = null;
-    else if (idx == 0) head = head.getNext();
-    else {
-      Node<T> prev = null, curr = head;
-      for ( ; idx > 0; --idx, prev = curr, curr = curr.getNext());
-      prev.setNext(curr.getNext());
-      if (curr.hasNext()) curr.setPrev(prev);
-      else tail = prev;
-    }
-    --sz;
-  }*/
   public void deleteAtIndex(int idx){
     if (idx >= sz) throw new InputMismatchException("Invalid Index!");
     Node<T> curr = head;
